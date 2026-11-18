@@ -1,0 +1,49 @@
+Cocked Bearing with loader: cocked_bearing__with_loader
+Cocked Bearing without  loader: cocked_bearing__without_loader
+Cocked Bearing without loader: cocked_bearing__without_loader
+Cocked Bearing without loader UB Double Mass: cocked_bearing__without_loader__ub_double_mass
+Cocker Bearing with Loader: cocked_bearing__with_loader
+Dynamic Unbalance 180 deg without Loader 15.5g , 14.06 g: dynamic_unbalance__phase_180__without_loader
+Dynamic Unbalance 90 deg without Loader: dynamic_unbalance__phase_90__without_loader
+Foundation Looseness without Loader/Level 1 with UB Single Mass: foundation_looseness__level_1__ub_single_mass
+Foundation Looseness without Loader/Level 1(all 4 buttom bolts): foundation_looseness__level_1
+Foundation Looseness without Loader/Level 2 (top platfrom blots ): foundation_looseness__level_2
+Foundation Looseness without Loader/Level 2 With UB Single Mass: foundation_looseness__level_2__ub_single_mass
+Foundation Looseness without Loader/Normal (lossen buttom bolts of rotor platform): foundation_looseness__loose_bottom_bolts
+Inner Race Fault with Loader - Inner Race Fault Low Severity with UB Single Mass: inner_race__low_severity__ub_single_mass
+Inner Race Fault with Loader/Inner Race Fault High Severity: inner_race__high_severity__no_ub_specified
+Inner Race Fault with Loader/Inner Race Fault High Severity With UB Double Mass: inner_race__high_severity__ub_double_mass
+Inner Race Fault with Loader/Inner Race Fault High Severity With UB Single Mass: inner_race__high_severity__ub_single_mass
+Inner Race Fault with Loader/Inner Race Fault Low Severity: inner_race__low_severity__no_ub_specified
+Inner Race Fault with Loader/Inner Race Fault Low Severity with UB Double Mass: inner_race__low_severity__ub_double_mass
+Inner Race Fault with Loader/Inner Race Fault Low Severity with UB Single Mass: inner_race__low_severity__ub_single_mass
+Level 1: foundation_looseness__level_1
+Level 1 with UB Single Mass: foundation_looseness__level_1__ub_single_mass
+Level 2: foundation_looseness__level_2
+Level 2 With UB Single Mass: foundation_looseness__level_2__ub_single_mass
+Normal: normal__loading_unspecified
+Normal Data With Loader: normal__with_loader
+Normal With Loader: normal__with_loader
+Normal/1200 rpm: normal__1200_rpm
+Normal/1300 rpm: normal__1300_rpm
+Normal/1400 rpm: normal__1400_rpm
+Normal/1500 rpm: normal__1500_rpm
+Normal/1500 rpm v1: normal__1500_rpm__v1
+Normal/1600 rpm: normal__1600_rpm
+Normal/1700 rpm: normal__1700_rpm
+Outer Race Fault with loader/Outer Race Fault High Severity: outer_race__high_severity__no_ub_specified
+Outer Race Fault with loader/Outer Race Fault High Severity with  UB Single mass: outer_race__high_severity__ub_single_mass
+Outer Race Fault with loader/Outer Race Fault High Severity with UB Double mass: outer_race__high_severity__ub_double_mass
+Outer Race Fault with loader/Outer Race Fault Low Severity: outer_race__low_severity__no_ub_specified
+Outer Race Fault with loader/Outer Race Fault Low Severity with UB Double Mass: outer_race__low_severity__ub_double_mass
+Outer Race Fault with loader/Outer Race Fault Low Severity with UB Single Mass: outer_race__low_severity__ub_single_mass
+UB Double Mass without Loader 15.5g 14.06g: dynamic_unbalance__double_mass__without_loader
+UB Single mass without Loader 15.5g: dynamic_unbalance__single_mass__without_loader
+normal: normal__loading_unspecified
+normal/1200 rpm: normal__1200_rpm
+normal/1300 rpm: normal__1300_rpm
+normal/1400 rpm: normal__1400_rpm
+normal/1500 rpm: normal__1500_rpm
+normal/1500 rpm v1: normal__1500_rpm__v1
+normal/1600 rpm: normal__1600_rpm
+normal/1700 rpm: normal__1700_rpm

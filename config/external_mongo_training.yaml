@@ -1,0 +1,13 @@
+# Separate database populated by the simulator acquisition application.
+# Fill in database, collection, and the field paths after its schema is known.
+# Set SHIP_FAULT_TRAINING_MONGO_URI in the environment if it uses another server.
+database: ship_simulator_training
+collection: Sim_data_for_traning
+fields:
+  label: verified_fault_subtype
+  session: session_id
+  created_at: created_at
+  timestamps: timestamps
+  channels: channels
+  sample_rate: fs
+  units: channel_units

@@ -1,0 +1,4 @@
+# Dependencies for future MongoDB-only training and model serving.
+-r requirements-runtime.txt
+matplotlib>=3.7
+tabulate>=0.9

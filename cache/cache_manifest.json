@@ -1,0 +1,22 @@
+{
+  "data_root": "C:\\Users\\Bharat\\Desktop\\New folder\\sim\\OLD BACKUP\\OLD BACKUP\\cbpm details\\Ship_Simulator_Complete_Fresh_Copy\\ship_fault_project\\data",
+  "file_count": 670,
+  "file_metadata_sha256": "cfe9b8432d261ed66ee2d2d4cf5c3c9d83a3098e2bbb26feaac3445d31eaf751",
+  "window_seconds": 1.0,
+  "hop_fraction": 0.5,
+  "run_speed_hz": 20.0,
+  "bearing_geometry": null,
+  "time_feature": "elapsed_window_start_s",
+  "expected_channels": [
+    "DEV (mm/s)",
+    "DE H (mm/s)",
+    "DE A (mm/s)",
+    "NDE V (mm/s)",
+    "NDE H (mm/s)",
+    "NDE A (mm/s)"
+  ],
+  "max_nan_fraction": 0.0,
+  "max_timestamp_irregular_fraction": 0.01,
+  "required_sample_rate_hz": 4000.0,
+  "excluded_files": []
+}

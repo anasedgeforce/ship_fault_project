@@ -1,0 +1,22 @@
+<CodeBlock language="text"># Python
+pycache/
+*.pyc
+.venv/
+venv/
+env/
+Secrets
+.env
+.env.*
+*.pem
+*.key
+Cache and logs
+.cache/
+*.log
+Large model files
+*.pt
+*.pth
+*.onnx
+*.gguf
+*.safetensors
+VS Code
+.vscode/</CodeBlock>

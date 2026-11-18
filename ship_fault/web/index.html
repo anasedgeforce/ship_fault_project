@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simulator Fault Prediction</title>
+  <link rel="stylesheet" href="/assets/app.css?v=digital-twin-4">
+  <script src="/assets/twin-map.js?v=2" defer></script>
+  <script src="/assets/twin-view.js?v=7" defer></script>
+  <script src="/assets/app.js?v=digital-twin-2" defer></script>
+</head>
+<body>
+  <div id="analysis-loader" class="analysis-loader hidden" role="status" aria-live="polite" aria-label="Analysis in progress">
+    <div class="loader-viewport">
+      <div class="loader-core">
+        <div class="loader-step active"><span class="loader-icon" aria-hidden="true"></span><span id="analysis-loader-message" class="loader-label">Analyzing recording...</span></div>
+        <p class="hint">Please wait while the server processes the recording.</p>
+      </div>
+    </div>
+    <div class="loader-vignette"></div>
+  </div>
+  <aside class="app-sidebar" aria-label="Application navigation">
+    <div class="sidebar-brand"><span class="sidebar-brand-mark" aria-hidden="true">∿</span><div><strong>Simulator Fault<br>Prediction</strong><small>Vibration Monitoring</small></div></div>
+    <p class="sidebar-heading">Workspace</p>
+    <nav class="mode-tabs" role="tablist" aria-label="Prediction input">
+      <button id="manual-tab" class="tab active" type="button" role="tab" aria-selected="true"><span class="tab-index">01</span>Fault Analysis</button>
+      <button id="live-tab" class="tab" type="button" role="tab" aria-selected="false"><span class="tab-index">02</span>Live Monitor</button>
+    </nav>
+    <div class="sidebar-status"><span class="sidebar-status-dot" aria-hidden="true"></span><strong id="sidebar-model-state">Checking models...</strong><small>Local inference</small></div>
+  </aside>
+
+  <main class="app-shell">
+    <section class="hero-row">
+      <div>
+        <p class="kicker">Simulator / Fault Analysis</p>
+        <h1>Simulator Fault Prediction<span class="title-accent">.</span></h1>
+      </div>
+      <div class="hero-meta"><span class="meta-label">Model Coverage</span><strong id="model-badge">Loading models...</strong></div>
+    </section>
+
+    <details class="api-key-setting"><summary>Advanced Connection Settings</summary><label>Server API Key <input id="api-key" type="password" autocomplete="off" placeholder="Enter SHIP_FAULT_API_KEY"></label></details>
+
+    <div id="manual-workspace" class="workspace-grid">
+      <section id="manual-panel" class="panel analysis-panel" role="tabpanel" aria-labelledby="manual-tab">
+        <div class="panel-header"><div><p class="panel-index">Analysis Input</p><h2>Choose a Recording</h2><p>Select a saved sample from the previous dataset or provide your own vibration capture.</p></div></div>
+        <div class="source-switch" role="radiogroup" aria-label="Manual source">
+          <label><input type="radio" name="source" value="saved" checked><span class="source-title">Saved Recording</span><span class="source-note">Use catalog samples</span></label>
+          <label><input type="radio" name="source" value="file"><span class="source-title">Upload File</span><span class="source-note">CSV, TSV or JSON</span></label>
+          <label><input type="radio" name="source" value="paste"><span class="source-title">Paste Readings</span><span class="source-note">Raw sensor rows</span></label>
+        </div>
+        <div id="saved-source" class="source-panel">
+          <div class="fields three"><label>Evaluation Day<select id="day-select"></select></label><label>Fault Condition<select id="condition-select"></select></label><label>Recording<select id="file-select"></select></label></div>
+        </div>
+        <div id="file-source" class="source-panel hidden"><div class="fields upload-options"><label>One CSV, TSV, or JSON File<input id="file-input" type="file" accept=".csv,.tsv,.json,text/csv,application/json"></label><label>Folder of CSV Files<input id="folder-input" type="file" webkitdirectory directory multiple accept=".csv,text/csv"></label></div><p id="upload-count" class="hint">Choose a file or a folder. Your most recent selection is used.</p>        <label>Known Labels for This Upload (Optional JSON File)<input id="labels-input" type="file" accept=".json,application/json"></label><button id="clear-labels" class="quiet label-clear hidden" type="button">Clear Label File</button>
+        <p class="hint">Leave this empty for synthetic or unlabeled recordings. To measure accuracy, provide verified labels as {"recording.csv":{"family":"outer_race","detail":"outer_race__high_severity__no_ub_specified"}}. Use relative paths for folders.</p>
+</div>
+        <div id="paste-source" class="source-panel hidden"><label>Paste Full CSV, Spreadsheet Rows, or JSON<textarea id="paste-input" rows="8" placeholder="Time,DEV (mm/s),DE H (mm/s),DE A (mm/s),NDE V (mm/s),NDE H (mm/s),NDE A (mm/s)&#10;0.00000,..."></textarea></label><p class="hint">Include the header and at least 4,000 consecutive rows.</p><div class="sample-buttons"><button class="quiet sample-load" type="button" data-sample="synthetic_unseen_smooth.csv">Load Smooth Sample</button><button class="quiet sample-load" type="button" data-sample="synthetic_unseen_impulsive.csv">Load Impulsive Sample</button><span id="paste-count" class="hint"></span></div></div>
+        <div class="analysis-footer"><div><span class="signal-spec">4 kHz</span><span class="signal-spec">6 Axes</span><span class="signal-spec">1 s Windows</span></div><button id="predict" class="primary" type="button">Run Analysis <span>↗</span></button></div>
+      </section>
+
+      <aside class="context-rail">
+        <section class="rail-card"><p class="panel-index">Run Context</p><div class="rail-row"><span>Input Mode</span><strong id="context-mode">Recording Analysis</strong></div><div class="rail-row"><span>Minimum Capture</span><strong>4,000 samples</strong></div><div class="rail-row"><span>Model State</span><strong id="context-model-state">Checking...</strong></div></section>
+        <section id="recording-duration-card" class="rail-card hidden"><p class="panel-index">Recording Duration</p><strong id="recording-duration" class="rail-duration-value"></strong><p class="rail-duration-note">Sensor time; source date may be unavailable</p></section>
+      </aside>
+    </div>
+
+    <section id="live-panel" class="panel live-panel hidden" role="tabpanel" aria-labelledby="live-tab">
+      <div class="panel-header"><div><p class="panel-index">Stream Input</p><h2>Live Sensor Stream</h2><p>Watch vibration batches from a DAQ adapter connected to this local server.</p></div></div>
+      <div class="fields live-fields"><label>Stream ID<input id="stream-id" value="sensor-1" maxlength="64" autocomplete="off"></label><div class="fixed-equipment"><span>Equipment ID</span><code id="equipment-id">Loading...</code></div><div class="live-buttons"><button id="watch-stream" class="primary" type="button">Watch Stream</button><button id="reset-stream" class="quiet" type="button">Reset</button></div></div>
+      <p class="hint">POST JSON batches to <code id="stream-endpoint">/v1/streams/sensor-1/samples</code>. The first result needs 4,000 samples.</p><p id="live-status" class="status-line">Waiting for a stream to be selected.</p><button id="retry-live-storage" class="quiet hidden" type="button">Retry Saving Results</button><p class="hint">Input requires six velocity channels in mm/s at 4 kHz. Long continuous streams and unverified equipment require review.</p>
+      <div id="live-monitor" class="live-monitor hidden"><div class="monitor-row"><strong>Review Status</strong><span id="live-decision"></span></div><div class="monitor-row"><strong>Fault Family / Subtype</strong><span id="live-candidate"></span></div><div class="monitor-row"><strong>Data Quality</strong><span id="live-quality"></span></div><div class="monitor-row"><strong>MongoDB Reference</strong><span id="live-source"></span></div><div class="monitor-row"><strong>Persistent Alert</strong><span id="live-alert"></span></div><div class="monitor-row"><strong>Recording Time</strong><span id="live-time"></span></div><div class="chart-grid"><div><h3>Waveform · First Velocity Axis</h3><canvas id="waveform-chart" width="480" height="130" aria-label="Latest waveform"></canvas></div><div><h3>Spectrum · Mean of Six Axes</h3><canvas id="spectrum-chart" width="480" height="130" aria-label="Latest frequency spectrum"></canvas></div><div><h3>RMS Trend · First Velocity Axis</h3><canvas id="trend-chart" width="480" height="130" aria-label="Recent RMS trend"></canvas></div></div></div>
+    </section>
+
+    <section id="upload-summary" class="panel results-panel hidden" aria-live="polite">
+      <div class="panel-header"><div><h2>Uploaded Dataset Summary</h2><p id="upload-summary-note">Results from the selected upload.</p></div><button id="download-upload" class="quiet" type="button">Download Report</button></div>
+      <div class="summary-grid upload-summary-grid">
+        <div class="summary"><span>Overall Finding</span><strong id="upload-fault-status"></strong><small id="upload-fault-count"></small></div>
+        <div class="summary"><span>Files Analyzed</span><strong id="upload-file-count"></strong><small id="upload-window-count"></small></div>
+        <div class="summary"><span>Reference Family Recording Accuracy</span><strong id="upload-validation-accuracy"></strong><small>Previous unseen-day recordings, not this upload</small></div>
+        <div class="summary"><span>Reference Subtype Recording Accuracy</span><strong id="upload-detail-accuracy"></strong><small>Previous unseen-day recordings, not this upload</small></div>
+      </div>
+      <p id="upload-accuracy-note" class="hint"></p>
+      <div class="table-wrap"><table><thead><tr><th>File</th><th>Fault Family</th><th>Family Model Score</th><th>Fault Subtype</th><th>Subtype Model Score</th><th>Review Status</th></tr></thead><tbody id="upload-result-rows"></tbody></table></div>
+      <div class="prediction-groups-section"><h3>Matching Prediction Groups</h3><p id="upload-group-note" class="hint"></p>
+        <div id="upload-groups-table" class="table-wrap hidden"><table><thead><tr><th>Fault Family</th><th>Fault Subtype</th><th>Files</th><th>Average Family Model Score</th><th>Average Subtype Model Score</th></tr></thead><tbody id="upload-group-rows"></tbody></table></div>
+      </div>
+    </section>
+
+    <section id="prediction-panel" class="panel results-panel" aria-live="polite">
+      <div class="panel-header"><div><h2>Prediction</h2><p id="result-note">Results appear here after a recording is processed.</p></div><button id="download" class="quiet hidden" type="button">Download JSON</button></div>
+      <div id="status" class="notice">Select an input above and run a prediction.</div>
+      <div id="result" class="hidden">
+        <div class="summary-grid"><div class="summary"><span>Fault Family</span><strong id="family-label"></strong><div id="family-score" class="model-score-line"></div></div><div class="summary"><span>Fault Subtype</span><strong id="detail-label"></strong><div id="detail-score" class="model-score-line"></div></div><div id="prediction-window-summary" class="summary"><span>Prediction Windows</span><strong id="window-count"></strong><small>One second windows, 0.5 second hop</small></div><div id="live-recording-duration-card" class="summary hidden"><span>Recording Duration</span><strong id="live-recording-duration"></strong><small>Sensor time; source date may be unavailable</small></div></div>
+        <div id="prediction-window-table" class="table-wrap"><table><thead><tr><th>Start (s)</th><th>Fault Family</th><th>Model Score</th><th>Fault Subtype</th><th>Model Score</th></tr></thead><tbody id="result-rows"></tbody></table></div>
+        <p class="hint">Model scores are uncalibrated. The fault subtype is chosen within the predicted family; disagreement from the independent subtype model is flagged for review.</p>
+      </div>
+    </section>
+
+    <section id="digital-twin-panel" class="panel twin-panel hidden" aria-label="Digital twin fault visualization">
+      <div class="panel-header"><div><p class="panel-index">Vibration Prediction</p><h2>Simulator Digital Twin</h2><p id="twin-status">No fault region highlighted.</p></div></div>
+      <div class="twin-layout">
+        <div class="twin-stage">
+          <iframe id="digital-twin-frame" title="Simulator 3D digital twin" sandbox="allow-scripts" referrerpolicy="no-referrer"></iframe>
+        </div>
+        <div class="twin-findings"><h3>Fault Candidates</h3><ul id="twin-fault-list"></ul><p>Highlights show component regions inferred from vibration. Multiple highlights from an upload folder may come from different CSVs. Animation speed is illustrative, not measured RPM. No temperature data is used.</p></div>
+      </div>
+    </section>
+
+
+  </main>
+</body>
+</html>

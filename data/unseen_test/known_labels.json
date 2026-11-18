@@ -1,0 +1,34 @@
+{
+  "Cocked Bearing-cocked_bearing__with_loader/Day1_10.csv": {
+    "family": "cocked_bearing",
+    "detail": "cocked_bearing__with_loader"
+  },
+  "Foundation Looseness/Day1_4-foundation_looseness__level_2.csv": {
+    "family": "foundation_looseness",
+    "detail": "foundation_looseness__level_2"
+  },
+  "Inner Race Fault-inner_race__high_severity__no_ub_specified/Day1_6.csv": {
+    "family": "inner_race",
+    "detail": "inner_race__high_severity__no_ub_specified"
+  },
+  "Normal-normal__with_loader/Day2_9.csv": {
+    "family": "normal",
+    "detail": "normal__with_loader"
+  },
+  "Dynamic Unbalance-dynamic_unbalance__single_mass__without_loader/Day2_3.csv": {
+    "family": "dynamic_unbalance",
+    "detail": "dynamic_unbalance__single_mass__without_loader"
+  },
+  "Foundation Looseness/Day3_1-foundation_looseness__level_1.csv": {
+    "family": "foundation_looseness",
+    "detail": "foundation_looseness__level_1"
+  },
+  "Foundation Looseness/Day3_5-foundation_looseness__level_2__ub_single_mass.csv": {
+    "family": "foundation_looseness",
+    "detail": "foundation_looseness__level_2__ub_single_mass"
+  },
+  "Outer Race Fault-outer_race__low_severity__no_ub_specified/Day3_10.csv": {
+    "family": "outer_race",
+    "detail": "outer_race__low_severity__no_ub_specified"
+  }
+}

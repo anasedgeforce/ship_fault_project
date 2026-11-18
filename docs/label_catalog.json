@@ -1,0 +1,290 @@
+{
+  "version": 1,
+  "families": [
+    {
+      "id": "normal",
+      "display_name": "Normal"
+    },
+    {
+      "id": "inner_race",
+      "display_name": "Inner Race Fault"
+    },
+    {
+      "id": "outer_race",
+      "display_name": "Outer Race Fault"
+    },
+    {
+      "id": "cocked_bearing",
+      "display_name": "Cocked Bearing"
+    },
+    {
+      "id": "foundation_looseness",
+      "display_name": "Foundation Looseness"
+    },
+    {
+      "id": "dynamic_unbalance",
+      "display_name": "Dynamic Unbalance"
+    }
+  ],
+  "subtypes": [
+    {
+      "id": "normal__1200_rpm",
+      "family_id": "normal",
+      "display_name": "Normal \u2014 1,200 RPM",
+      "subtype_name": "1,200 RPM"
+    },
+    {
+      "id": "normal__1300_rpm",
+      "family_id": "normal",
+      "display_name": "Normal \u2014 1,300 RPM",
+      "subtype_name": "1,300 RPM"
+    },
+    {
+      "id": "normal__1400_rpm",
+      "family_id": "normal",
+      "display_name": "Normal \u2014 1,400 RPM",
+      "subtype_name": "1,400 RPM"
+    },
+    {
+      "id": "normal__1500_rpm",
+      "family_id": "normal",
+      "display_name": "Normal \u2014 1,500 RPM",
+      "subtype_name": "1,500 RPM"
+    },
+    {
+      "id": "normal__1600_rpm",
+      "family_id": "normal",
+      "display_name": "Normal \u2014 1,600 RPM",
+      "subtype_name": "1,600 RPM"
+    },
+    {
+      "id": "normal__1700_rpm",
+      "family_id": "normal",
+      "display_name": "Normal \u2014 1,700 RPM",
+      "subtype_name": "1,700 RPM"
+    },
+    {
+      "id": "normal__1500_rpm__v1",
+      "family_id": "normal",
+      "display_name": "Normal \u2014 1,500 RPM (Variant 1)",
+      "subtype_name": "1,500 RPM (Variant 1)"
+    },
+    {
+      "id": "normal__loading_unspecified",
+      "family_id": "normal",
+      "display_name": "Normal \u2014 Loading Unspecified",
+      "subtype_name": "Loading Unspecified"
+    },
+    {
+      "id": "normal__with_loader",
+      "family_id": "normal",
+      "display_name": "Normal \u2014 With Loader",
+      "subtype_name": "With Loader"
+    },
+    {
+      "id": "inner_race__high_severity__ub_double_mass",
+      "family_id": "inner_race",
+      "display_name": "Inner Race Fault \u2014 High Severity \u2014 Double-Mass Unbalance",
+      "subtype_name": "High Severity \u2014 Double-Mass Unbalance"
+    },
+    {
+      "id": "inner_race__high_severity__ub_single_mass",
+      "family_id": "inner_race",
+      "display_name": "Inner Race Fault \u2014 High Severity \u2014 Single-Mass Unbalance",
+      "subtype_name": "High Severity \u2014 Single-Mass Unbalance"
+    },
+    {
+      "id": "inner_race__high_severity__no_ub_specified",
+      "family_id": "inner_race",
+      "display_name": "Inner Race Fault \u2014 High Severity \u2014 Unbalance Not Specified",
+      "subtype_name": "High Severity \u2014 Unbalance Not Specified"
+    },
+    {
+      "id": "inner_race__low_severity__ub_double_mass",
+      "family_id": "inner_race",
+      "display_name": "Inner Race Fault \u2014 Low Severity \u2014 Double-Mass Unbalance",
+      "subtype_name": "Low Severity \u2014 Double-Mass Unbalance"
+    },
+    {
+      "id": "inner_race__low_severity__ub_single_mass",
+      "family_id": "inner_race",
+      "display_name": "Inner Race Fault \u2014 Low Severity \u2014 Single-Mass Unbalance",
+      "subtype_name": "Low Severity \u2014 Single-Mass Unbalance"
+    },
+    {
+      "id": "inner_race__low_severity__no_ub_specified",
+      "family_id": "inner_race",
+      "display_name": "Inner Race Fault \u2014 Low Severity \u2014 Unbalance Not Specified",
+      "subtype_name": "Low Severity \u2014 Unbalance Not Specified"
+    },
+    {
+      "id": "outer_race__high_severity__ub_double_mass",
+      "family_id": "outer_race",
+      "display_name": "Outer Race Fault \u2014 High Severity \u2014 Double-Mass Unbalance",
+      "subtype_name": "High Severity \u2014 Double-Mass Unbalance"
+    },
+    {
+      "id": "outer_race__high_severity__ub_single_mass",
+      "family_id": "outer_race",
+      "display_name": "Outer Race Fault \u2014 High Severity \u2014 Single-Mass Unbalance",
+      "subtype_name": "High Severity \u2014 Single-Mass Unbalance"
+    },
+    {
+      "id": "outer_race__high_severity__no_ub_specified",
+      "family_id": "outer_race",
+      "display_name": "Outer Race Fault \u2014 High Severity \u2014 Unbalance Not Specified",
+      "subtype_name": "High Severity \u2014 Unbalance Not Specified"
+    },
+    {
+      "id": "outer_race__low_severity__ub_double_mass",
+      "family_id": "outer_race",
+      "display_name": "Outer Race Fault \u2014 Low Severity \u2014 Double-Mass Unbalance",
+      "subtype_name": "Low Severity \u2014 Double-Mass Unbalance"
+    },
+    {
+      "id": "outer_race__low_severity__ub_single_mass",
+      "family_id": "outer_race",
+      "display_name": "Outer Race Fault \u2014 Low Severity \u2014 Single-Mass Unbalance",
+      "subtype_name": "Low Severity \u2014 Single-Mass Unbalance"
+    },
+    {
+      "id": "outer_race__low_severity__no_ub_specified",
+      "family_id": "outer_race",
+      "display_name": "Outer Race Fault \u2014 Low Severity \u2014 Unbalance Not Specified",
+      "subtype_name": "Low Severity \u2014 Unbalance Not Specified"
+    },
+    {
+      "id": "cocked_bearing__with_loader",
+      "family_id": "cocked_bearing",
+      "display_name": "Cocked Bearing \u2014 With Loader",
+      "subtype_name": "With Loader"
+    },
+    {
+      "id": "cocked_bearing__without_loader",
+      "family_id": "cocked_bearing",
+      "display_name": "Cocked Bearing \u2014 Without Loader",
+      "subtype_name": "Without Loader"
+    },
+    {
+      "id": "cocked_bearing__without_loader__ub_double_mass",
+      "family_id": "cocked_bearing",
+      "display_name": "Cocked Bearing \u2014 Without Loader \u2014 Double-Mass Unbalance",
+      "subtype_name": "Without Loader \u2014 Double-Mass Unbalance"
+    },
+    {
+      "id": "foundation_looseness__level_1",
+      "family_id": "foundation_looseness",
+      "display_name": "Foundation Looseness \u2014 Level 1",
+      "subtype_name": "Level 1"
+    },
+    {
+      "id": "foundation_looseness__level_2",
+      "family_id": "foundation_looseness",
+      "display_name": "Foundation Looseness \u2014 Level 2",
+      "subtype_name": "Level 2"
+    },
+    {
+      "id": "foundation_looseness__level_1__ub_single_mass",
+      "family_id": "foundation_looseness",
+      "display_name": "Foundation Looseness \u2014 Level 1 \u2014 Single-Mass Unbalance",
+      "subtype_name": "Level 1 \u2014 Single-Mass Unbalance"
+    },
+    {
+      "id": "foundation_looseness__level_2__ub_single_mass",
+      "family_id": "foundation_looseness",
+      "display_name": "Foundation Looseness \u2014 Level 2 \u2014 Single-Mass Unbalance",
+      "subtype_name": "Level 2 \u2014 Single-Mass Unbalance"
+    },
+    {
+      "id": "foundation_looseness__loose_bottom_bolts",
+      "family_id": "foundation_looseness",
+      "display_name": "Foundation Looseness \u2014 Loose Bottom Bolts",
+      "subtype_name": "Loose Bottom Bolts"
+    },
+    {
+      "id": "dynamic_unbalance__phase_180__without_loader",
+      "family_id": "dynamic_unbalance",
+      "display_name": "Dynamic Unbalance \u2014 180\u00b0 \u2014 Without Loader",
+      "subtype_name": "180\u00b0 \u2014 Without Loader"
+    },
+    {
+      "id": "dynamic_unbalance__phase_90__without_loader",
+      "family_id": "dynamic_unbalance",
+      "display_name": "Dynamic Unbalance \u2014 90\u00b0 \u2014 Without Loader",
+      "subtype_name": "90\u00b0 \u2014 Without Loader"
+    },
+    {
+      "id": "dynamic_unbalance__double_mass__without_loader",
+      "family_id": "dynamic_unbalance",
+      "display_name": "Dynamic Unbalance \u2014 Double Mass \u2014 Without Loader",
+      "subtype_name": "Double Mass \u2014 Without Loader"
+    },
+    {
+      "id": "dynamic_unbalance__single_mass__without_loader",
+      "family_id": "dynamic_unbalance",
+      "display_name": "Dynamic Unbalance \u2014 Single Mass \u2014 Without Loader",
+      "subtype_name": "Single Mass \u2014 Without Loader"
+    }
+  ],
+  "labels": {
+    "normal": "Normal",
+    "inner_race": "Inner Race Fault",
+    "outer_race": "Outer Race Fault",
+    "cocked_bearing": "Cocked Bearing",
+    "foundation_looseness": "Foundation Looseness",
+    "dynamic_unbalance": "Dynamic Unbalance",
+    "normal__1200_rpm": "Normal \u2014 1,200 RPM",
+    "normal__1300_rpm": "Normal \u2014 1,300 RPM",
+    "normal__1400_rpm": "Normal \u2014 1,400 RPM",
+    "normal__1500_rpm": "Normal \u2014 1,500 RPM",
+    "normal__1600_rpm": "Normal \u2014 1,600 RPM",
+    "normal__1700_rpm": "Normal \u2014 1,700 RPM",
+    "normal__1500_rpm__v1": "Normal \u2014 1,500 RPM (Variant 1)",
+    "normal__loading_unspecified": "Normal \u2014 Loading Unspecified",
+    "normal__with_loader": "Normal \u2014 With Loader",
+    "inner_race__high_severity__ub_double_mass": "Inner Race Fault \u2014 High Severity \u2014 Double-Mass Unbalance",
+    "inner_race__high_severity__ub_single_mass": "Inner Race Fault \u2014 High Severity \u2014 Single-Mass Unbalance",
+    "inner_race__high_severity__no_ub_specified": "Inner Race Fault \u2014 High Severity \u2014 Unbalance Not Specified",
+    "inner_race__low_severity__ub_double_mass": "Inner Race Fault \u2014 Low Severity \u2014 Double-Mass Unbalance",
+    "inner_race__low_severity__ub_single_mass": "Inner Race Fault \u2014 Low Severity \u2014 Single-Mass Unbalance",
+    "inner_race__low_severity__no_ub_specified": "Inner Race Fault \u2014 Low Severity \u2014 Unbalance Not Specified",
+    "outer_race__high_severity__ub_double_mass": "Outer Race Fault \u2014 High Severity \u2014 Double-Mass Unbalance",
+    "outer_race__high_severity__ub_single_mass": "Outer Race Fault \u2014 High Severity \u2014 Single-Mass Unbalance",
+    "outer_race__high_severity__no_ub_specified": "Outer Race Fault \u2014 High Severity \u2014 Unbalance Not Specified",
+    "outer_race__low_severity__ub_double_mass": "Outer Race Fault \u2014 Low Severity \u2014 Double-Mass Unbalance",
+    "outer_race__low_severity__ub_single_mass": "Outer Race Fault \u2014 Low Severity \u2014 Single-Mass Unbalance",
+    "outer_race__low_severity__no_ub_specified": "Outer Race Fault \u2014 Low Severity \u2014 Unbalance Not Specified",
+    "cocked_bearing__with_loader": "Cocked Bearing \u2014 With Loader",
+    "cocked_bearing__without_loader": "Cocked Bearing \u2014 Without Loader",
+    "cocked_bearing__without_loader__ub_double_mass": "Cocked Bearing \u2014 Without Loader \u2014 Double-Mass Unbalance",
+    "foundation_looseness__level_1": "Foundation Looseness \u2014 Level 1",
+    "foundation_looseness__level_2": "Foundation Looseness \u2014 Level 2",
+    "foundation_looseness__level_1__ub_single_mass": "Foundation Looseness \u2014 Level 1 \u2014 Single-Mass Unbalance",
+    "foundation_looseness__level_2__ub_single_mass": "Foundation Looseness \u2014 Level 2 \u2014 Single-Mass Unbalance",
+    "foundation_looseness__loose_bottom_bolts": "Foundation Looseness \u2014 Loose Bottom Bolts",
+    "dynamic_unbalance__phase_180__without_loader": "Dynamic Unbalance \u2014 180\u00b0 \u2014 Without Loader",
+    "dynamic_unbalance__phase_90__without_loader": "Dynamic Unbalance \u2014 90\u00b0 \u2014 Without Loader",
+    "dynamic_unbalance__double_mass__without_loader": "Dynamic Unbalance \u2014 Double Mass \u2014 Without Loader",
+    "dynamic_unbalance__single_mass__without_loader": "Dynamic Unbalance \u2014 Single Mass \u2014 Without Loader"
+  },
+  "decisions": {
+    "classified": "Prediction Available",
+    "needs_review": "Review Required",
+    "invalid_input": "Invalid Input",
+    "failed": "Analysis Failed"
+  },
+  "review_reasons": {
+    "continuous_duration_unvalidated": "Continuous operation has not been validated for this recording duration.",
+    "physical_axis_mapping_unverified": "Physical sensor-axis mapping has not been verified.",
+    "equipment_domain_unvalidated": "Model suitability for this equipment has not been validated.",
+    "family_detail_disagree": "The family and independent subtype predictions disagree.",
+    "low_model_score": "One or more model scores are below the review threshold.",
+    "novelty_reference_unavailable": "The reference for unfamiliar signals is unavailable.",
+    "outside_training_feature_reference": "The signal differs from the training reference.",
+    "flat_channel": "A channel is flat or nearly flat.",
+    "possible_clipping": "A channel may be clipped at its measurement limit.",
+    "identical_channels": "Two channels contain identical readings; check acquisition and wiring.",
+    "mixed_fault_predictions_within_recording": "The recording contains inconsistent fault predictions."
+  },
+  "score_description": "Model score, not measured accuracy or a calibrated probability of a fault."
+}

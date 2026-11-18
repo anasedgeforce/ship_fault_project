@@ -1,0 +1,53 @@
+{
+  "audit_id": "pipeline_audit_dcc63a109b964bd5",
+  "started_at_utc": "2026-11-11T03:54:14.248787+00:00",
+  "database": "ship_fault_monitoring",
+  "checks": {
+    "mongo_ping_and_api_connection": true,
+    "raw_binary_roundtrip": true,
+    "save_read_predict": true,
+    "manual_prediction_not_stored": true,
+    "live_manual_predictions_match": true,
+    "recording_time_and_channels": true,
+    "normal_and_fault_storage": true,
+    "invalid_gap_rejected_before_storage": true,
+    "history_and_diagnostics": true,
+    "only_existing_collections": true
+  },
+  "streams": [
+    {
+      "source_csv": "data_day1/Normal Data With Loader/1.csv",
+      "test_stream": "pipeline_audit_dcc63a109b964bd5_normal",
+      "samples": 8000,
+      "windows": 3,
+      "raw_batches": 2,
+      "fault_candidates": 0,
+      "family": "normal",
+      "child": "normal__with_loader",
+      "reset_preserved_both_sessions": true
+    },
+    {
+      "source_csv": "data_day1/Cocked Bearing with loader/1.csv",
+      "test_stream": "pipeline_audit_dcc63a109b964bd5_fault",
+      "samples": 8000,
+      "windows": 3,
+      "raw_batches": 2,
+      "fault_candidates": 3,
+      "family": "cocked_bearing",
+      "child": "cocked_bearing__with_loader",
+      "reset_preserved_both_sessions": true
+    }
+  ],
+  "models": {
+    "family_model_sha256": "351ddd82f7e5c539f64180db8d41d9cfe63ae1b9c3596976e9fcce57a49acd7d",
+    "detail_model_sha256": "acb22ae3290f7ecaa86377efa213158811d8164f20e28d4dc1d0f735661b1fe3"
+  },
+  "status": "passed",
+  "cleanup": {
+    "deleted_test_batches": 6,
+    "deleted_test_faults": 8,
+    "remaining_test_batches": 0,
+    "remaining_test_faults": 0
+  },
+  "finished_at_utc": "2026-11-11T03:54:16.270275+00:00"
+}

@@ -1,0 +1,34 @@
+catalog_version,state,family_id,family_name,subtype_id,subtype_name,display_name
+1,normal,normal,Normal,normal__1200_rpm,"1,200 RPM","Normal — 1,200 RPM"
+1,normal,normal,Normal,normal__1300_rpm,"1,300 RPM","Normal — 1,300 RPM"
+1,normal,normal,Normal,normal__1400_rpm,"1,400 RPM","Normal — 1,400 RPM"
+1,normal,normal,Normal,normal__1500_rpm,"1,500 RPM","Normal — 1,500 RPM"
+1,normal,normal,Normal,normal__1600_rpm,"1,600 RPM","Normal — 1,600 RPM"
+1,normal,normal,Normal,normal__1700_rpm,"1,700 RPM","Normal — 1,700 RPM"
+1,normal,normal,Normal,normal__1500_rpm__v1,"1,500 RPM (Variant 1)","Normal — 1,500 RPM (Variant 1)"
+1,normal,normal,Normal,normal__loading_unspecified,Loading Unspecified,Normal — Loading Unspecified
+1,normal,normal,Normal,normal__with_loader,With Loader,Normal — With Loader
+1,fault,inner_race,Inner Race Fault,inner_race__high_severity__ub_double_mass,High Severity — Double-Mass Unbalance,Inner Race Fault — High Severity — Double-Mass Unbalance
+1,fault,inner_race,Inner Race Fault,inner_race__high_severity__ub_single_mass,High Severity — Single-Mass Unbalance,Inner Race Fault — High Severity — Single-Mass Unbalance
+1,fault,inner_race,Inner Race Fault,inner_race__high_severity__no_ub_specified,High Severity — Unbalance Not Specified,Inner Race Fault — High Severity — Unbalance Not Specified
+1,fault,inner_race,Inner Race Fault,inner_race__low_severity__ub_double_mass,Low Severity — Double-Mass Unbalance,Inner Race Fault — Low Severity — Double-Mass Unbalance
+1,fault,inner_race,Inner Race Fault,inner_race__low_severity__ub_single_mass,Low Severity — Single-Mass Unbalance,Inner Race Fault — Low Severity — Single-Mass Unbalance
+1,fault,inner_race,Inner Race Fault,inner_race__low_severity__no_ub_specified,Low Severity — Unbalance Not Specified,Inner Race Fault — Low Severity — Unbalance Not Specified
+1,fault,outer_race,Outer Race Fault,outer_race__high_severity__ub_double_mass,High Severity — Double-Mass Unbalance,Outer Race Fault — High Severity — Double-Mass Unbalance
+1,fault,outer_race,Outer Race Fault,outer_race__high_severity__ub_single_mass,High Severity — Single-Mass Unbalance,Outer Race Fault — High Severity — Single-Mass Unbalance
+1,fault,outer_race,Outer Race Fault,outer_race__high_severity__no_ub_specified,High Severity — Unbalance Not Specified,Outer Race Fault — High Severity — Unbalance Not Specified
+1,fault,outer_race,Outer Race Fault,outer_race__low_severity__ub_double_mass,Low Severity — Double-Mass Unbalance,Outer Race Fault — Low Severity — Double-Mass Unbalance
+1,fault,outer_race,Outer Race Fault,outer_race__low_severity__ub_single_mass,Low Severity — Single-Mass Unbalance,Outer Race Fault — Low Severity — Single-Mass Unbalance
+1,fault,outer_race,Outer Race Fault,outer_race__low_severity__no_ub_specified,Low Severity — Unbalance Not Specified,Outer Race Fault — Low Severity — Unbalance Not Specified
+1,fault,cocked_bearing,Cocked Bearing,cocked_bearing__with_loader,With Loader,Cocked Bearing — With Loader
+1,fault,cocked_bearing,Cocked Bearing,cocked_bearing__without_loader,Without Loader,Cocked Bearing — Without Loader
+1,fault,cocked_bearing,Cocked Bearing,cocked_bearing__without_loader__ub_double_mass,Without Loader — Double-Mass Unbalance,Cocked Bearing — Without Loader — Double-Mass Unbalance
+1,fault,foundation_looseness,Foundation Looseness,foundation_looseness__level_1,Level 1,Foundation Looseness — Level 1
+1,fault,foundation_looseness,Foundation Looseness,foundation_looseness__level_2,Level 2,Foundation Looseness — Level 2
+1,fault,foundation_looseness,Foundation Looseness,foundation_looseness__level_1__ub_single_mass,Level 1 — Single-Mass Unbalance,Foundation Looseness — Level 1 — Single-Mass Unbalance
+1,fault,foundation_looseness,Foundation Looseness,foundation_looseness__level_2__ub_single_mass,Level 2 — Single-Mass Unbalance,Foundation Looseness — Level 2 — Single-Mass Unbalance
+1,fault,foundation_looseness,Foundation Looseness,foundation_looseness__loose_bottom_bolts,Loose Bottom Bolts,Foundation Looseness — Loose Bottom Bolts
+1,fault,dynamic_unbalance,Dynamic Unbalance,dynamic_unbalance__phase_180__without_loader,180° — Without Loader,Dynamic Unbalance — 180° — Without Loader
+1,fault,dynamic_unbalance,Dynamic Unbalance,dynamic_unbalance__phase_90__without_loader,90° — Without Loader,Dynamic Unbalance — 90° — Without Loader
+1,fault,dynamic_unbalance,Dynamic Unbalance,dynamic_unbalance__double_mass__without_loader,Double Mass — Without Loader,Dynamic Unbalance — Double Mass — Without Loader
+1,fault,dynamic_unbalance,Dynamic Unbalance,dynamic_unbalance__single_mass__without_loader,Single Mass — Without Loader,Dynamic Unbalance — Single Mass — Without Loader

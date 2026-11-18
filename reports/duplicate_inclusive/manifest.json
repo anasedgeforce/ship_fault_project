@@ -1,0 +1,61 @@
+{
+  "run_id": "20261104T041252Z_164da514",
+  "trained_at_utc": "2026-11-04T04:13:22.332273+00:00",
+  "raw_files": 670,
+  "valid_files": 661,
+  "duplicate_copies_included": 58,
+  "excluded_invalid_files": 0,
+  "excluded_reserved_sensor_copies": 9,
+  "recording_days": [
+    "data_day1",
+    "data_day2",
+    "data_day3"
+  ],
+  "skipped_days": [],
+  "windows": 9915,
+  "classes_family": 6,
+  "detailed_classes": 33,
+  "family_classes": 6,
+  "training_windows_per_file": 15,
+  "detailed_trees": 180,
+  "family_recipe": "baseline",
+  "detail_recipe": "rf_relative_amp",
+  "evaluation": "leave one recording day out; original fixed holdout excluded; validation unique files only; raw-hash overlap removed from training",
+  "final_training": "all valid files including duplicate copies",
+  "primary_task": "6-family",
+  "primary_output": "predictions[].family",
+  "family_blend_weights": [
+    0.5,
+    0.5
+  ],
+  "detailed_inference": "child chosen within predicted family; raw child score retained",
+  "family_artifact": "artifacts\\runs\\20261104T041252Z_164da514\\family.joblib",
+  "detail_artifact": "artifacts\\runs\\20261104T041252Z_164da514\\detailed_conditions.joblib",
+  "feature_config_artifact": "artifacts\\runs\\20261104T041252Z_164da514\\config_snapshot.json",
+  "family_sha256": "351ddd82f7e5c539f64180db8d41d9cfe63ae1b9c3596976e9fcce57a49acd7d",
+  "detail_sha256": "acb22ae3290f7ecaa86377efa213158811d8164f20e28d4dc1d0f735661b1fe3",
+  "config_snapshot_sha256": "08ef02a528485a5b47258924d3c44be288a4e1110787b8587b45aa34767ec020",
+  "raw_hash_inventory_sha256": "901ebd203ee2a285e69072db98850f35bcbb1d8cf816ea21acb29a0a311dcb92",
+  "fixed_holdout_sha256": "af81f48ebd3434daf58f16e750336fcf2568c51c100b730f13bece1f9c0f8a36",
+  "speed_source": "configured_reference",
+  "time_feature": "elapsed_window_start_s",
+  "sample_rate_hz": 4000.0,
+  "window_seconds": 1.0,
+  "hop_seconds": 0.5,
+  "expected_channels": [
+    "DEV (mm/s)",
+    "DE H (mm/s)",
+    "DE A (mm/s)",
+    "NDE V (mm/s)",
+    "NDE H (mm/s)",
+    "NDE A (mm/s)"
+  ],
+  "mean_accuracy": {
+    "33-detail": 0.5593265315254844,
+    "6-family": 0.7899540952551423
+  },
+  "mean_recording_accuracy": {
+    "33-detail": 0.5652649125162214,
+    "6-family": 0.8009769208394862
+  }
+}

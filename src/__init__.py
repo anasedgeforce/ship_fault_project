@@ -1,0 +1,1 @@
+"""Ship simulator condition monitoring."""

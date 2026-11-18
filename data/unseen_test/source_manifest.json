@@ -1,0 +1,42 @@
+[
+  {
+    "file": "Cocked Bearing-cocked_bearing__with_loader/Day1_10.csv",
+    "original_file": "data_day1/Cocked Bearing with loader/10.csv",
+    "sensor_sha256": "e6445bb5eef5a54ee5337eb0675907d8ef74c9a18c57f6d74b2670769a9a9357"
+  },
+  {
+    "file": "Foundation Looseness/Day1_4-foundation_looseness__level_2.csv",
+    "original_file": "data_day1/Foundation Looseness without Loader/Level 2 (top platfrom blots )/4.csv",
+    "sensor_sha256": "14ae8e353ffcf4d9d6eb400e92aa32b21a68bacc666e9f98329ec3abcefb3198"
+  },
+  {
+    "file": "Inner Race Fault-inner_race__high_severity__no_ub_specified/Day1_6.csv",
+    "original_file": "data_day1/Inner Race Fault with Loader/Inner Race Fault High Severity/6.csv",
+    "sensor_sha256": "f120858e856d3ddd6faf768488ef287850478211be1aa090b6b154a3bbe5f04f"
+  },
+  {
+    "file": "Normal-normal__with_loader/Day2_9.csv",
+    "original_file": "data_day2/Normal Data With Loader/9.csv",
+    "sensor_sha256": "3f078efa0dd50f01aa62d4794f9a70e0b858ebf3b1419816acd440058b140530"
+  },
+  {
+    "file": "Dynamic Unbalance-dynamic_unbalance__single_mass__without_loader/Day2_3.csv",
+    "original_file": "data_day2/UB Single mass without Loader 15.5g/3.csv",
+    "sensor_sha256": "c1e8d08145b7f517cdecae5f3bfe9da73b65cd2b1cb4fcbd7b9de1a03a4b6584"
+  },
+  {
+    "file": "Foundation Looseness/Day3_1-foundation_looseness__level_1.csv",
+    "original_file": "data_day3/Foundation Looseness without Loader/Level 1(all 4 buttom bolts)/1.csv",
+    "sensor_sha256": "2a527c5d85468667497d050de48966be161b64282b30822c2804b73211d1c877"
+  },
+  {
+    "file": "Foundation Looseness/Day3_5-foundation_looseness__level_2__ub_single_mass.csv",
+    "original_file": "data_day3/Foundation Looseness without Loader/Level 2 With UB Single Mass/5.csv",
+    "sensor_sha256": "c019c1dbc59a42f15d8524bb31722b6e3e5ac0a7919a920d956bb7b18b277a36"
+  },
+  {
+    "file": "Outer Race Fault-outer_race__low_severity__no_ub_specified/Day3_10.csv",
+    "original_file": "data_day3/Outer Race Fault with loader/Outer Race Fault Low Severity/10.csv",
+    "sensor_sha256": "06e048fddacac3d3e74f06b0c813051719f80b9e505b00216e99212e2987f8d0"
+  }
+]

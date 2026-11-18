@@ -1,0 +1,6 @@
+{
+  "estimated_speed_hz": 20.0,
+  "speed_source": "configured_reference",
+  "speed_estimation_file": null,
+  "time_feature": "elapsed_window_start_s"
+}

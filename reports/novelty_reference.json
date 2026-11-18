@@ -1,0 +1,30 @@
+{
+  "method": "IsolationForest on 175 waveform features; elapsed time excluded",
+  "threshold": -0.19584741786683366,
+  "threshold_rule": "minimum first percentile of known-condition held-out-day scores",
+  "known_training_window_flag_fraction": 0.002763957987838585,
+  "held_out_day_score_summaries": {
+    "data_day1": {
+      "windows": 3660,
+      "held_out_score_p01": -0.19584741786683366,
+      "held_out_score_median": 0.08455948910563241,
+      "known_condition_review_fraction_at_threshold": 0.010109289617486339
+    },
+    "data_day2": {
+      "windows": 1815,
+      "held_out_score_p01": -0.13071554101462055,
+      "held_out_score_median": 0.07157627714748221,
+      "known_condition_review_fraction_at_threshold": 0.0
+    },
+    "data_day3": {
+      "windows": 3570,
+      "held_out_score_p01": -0.06550768058021066,
+      "held_out_score_median": 0.09543661270150239,
+      "known_condition_review_fraction_at_threshold": 0.0
+    }
+  },
+  "unknown_fault_detection_validated": false,
+  "family_model_sha256": "351ddd82f7e5c539f64180db8d41d9cfe63ae1b9c3596976e9fcce57a49acd7d",
+  "artifact_sha256": "6ca151dba92b402ca9c91a669a09590d7181bbcb453bbceda10a58c48fc584c8",
+  "cache_sha256": "dd8279cc580655cab406d550ac37e2b0ffb4f56419e788d175cf6949ff6d7f55"
+}
